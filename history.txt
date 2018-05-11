@@ -6,3 +6,21 @@ Currently
 1174 lines of source code.
 552 statements
 17.4% 
+
+
+Build 2
+
+The display now consists of three list boxes, one for the source directory,
+one for the destination director and the middle one for the differences.
+
+Added logic to walk the source and destination directories, after both have
+been specified.
+
+Added the Analyse function which determined what files have been added to the
+source and not in destination, have been deleted from the destination i.e. no
+longer in source.
+
+Currently
+1430 lines of source code.
+701 statements
+17.6% 

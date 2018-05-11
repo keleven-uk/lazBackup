@@ -1,17 +1,13 @@
 object frmMain: TfrmMain
-  Left = 1447
-  Height = 216
-  Top = 497
-  Width = 273
+  Left = 744
+  Height = 696
+  Top = 201
+  Width = 1146
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'lazBackup'
-  ClientHeight = 196
-  ClientWidth = 273
-  Constraints.MaxHeight = 216
-  Constraints.MaxWidth = 273
-  Constraints.MinHeight = 216
-  Constraints.MinWidth = 273
+  ClientHeight = 676
+  ClientWidth = 1146
   Icon.Data = {
     3615000000000100020010100000000020006804000026000000202000000000
     2000A81000008E04000028000000100000002000000001002000000000004004
@@ -191,8 +187,8 @@ object frmMain: TfrmMain
   object stsBrInfo: TStatusBar
     Left = 0
     Height = 23
-    Top = 173
-    Width = 273
+    Top = 653
+    Width = 1146
     Panels = <    
       item
         Width = 60
@@ -206,9 +202,191 @@ object frmMain: TfrmMain
       end>
     SimplePanel = False
   end
+  object Panel1: TPanel
+    Left = 0
+    Height = 653
+    Top = 0
+    Width = 1146
+    Align = alClient
+    ClientHeight = 653
+    ClientWidth = 1146
+    TabOrder = 1
+    object Bevel1: TBevel
+      Left = 8
+      Height = 528
+      Top = 64
+      Width = 366
+    end
+    object Bevel2: TBevel
+      Left = 384
+      Height = 528
+      Top = 64
+      Width = 366
+    end
+    object Bevel3: TBevel
+      Left = 760
+      Height = 528
+      Top = 64
+      Width = 366
+    end
+    object drctryEdtSource: TDirectoryEdit
+      Left = 16
+      Height = 23
+      Top = 16
+      Width = 348
+      Directory = 'Source'
+      ShowHidden = False
+      ButtonWidth = 23
+      NumGlyphs = 1
+      MaxLength = 0
+      TabOrder = 0
+      OnChange = drctryEdtSourceChange
+      Text = 'Source'
+    end
+    object DrctryEdtDestination: TDirectoryEdit
+      Left = 768
+      Height = 23
+      Top = 8
+      Width = 344
+      Directory = 'Destination'
+      ShowHidden = False
+      ButtonWidth = 23
+      NumGlyphs = 1
+      MaxLength = 0
+      TabOrder = 1
+      OnChange = DrctryEdtDestinationChange
+      Text = 'Destination'
+    end
+    object lstBxSource: TListBox
+      Left = 16
+      Height = 488
+      Top = 72
+      Width = 348
+      ItemHeight = 0
+      ParentColor = True
+      TabOrder = 2
+    end
+    object lblSource: TLabel
+      Left = 16
+      Height = 15
+      Top = 568
+      Width = 36
+      Caption = 'Source'
+      ParentColor = False
+    end
+    object lblDestination: TLabel
+      Left = 768
+      Height = 15
+      Top = 568
+      Width = 60
+      Caption = 'Destination'
+      ParentColor = False
+    end
+    object Label1: TLabel
+      Left = 392
+      Height = 37
+      Top = 8
+      Width = 72
+      Caption = '>>>>'
+      Enabled = False
+      Font.Height = -27
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 648
+      Height = 37
+      Top = 8
+      Width = 72
+      Caption = '>>>>'
+      Enabled = False
+      Font.Height = -27
+      ParentColor = False
+      ParentFont = False
+    end
+    object btnAnalyse: TButton
+      Left = 472
+      Height = 25
+      Top = 20
+      Width = 75
+      Caption = 'Analyse'
+      Enabled = False
+      OnClick = btnAnalyseClick
+      TabOrder = 3
+    end
+    object btnCopy: TButton
+      Left = 560
+      Height = 25
+      Top = 20
+      Width = 75
+      Caption = 'Copy'
+      Enabled = False
+      TabOrder = 4
+    end
+    object drctryEdtStub: TDirectoryEdit
+      Left = 768
+      Height = 23
+      Top = 36
+      Width = 344
+      Directory = 'Stub'
+      ShowHidden = False
+      ButtonWidth = 23
+      NumGlyphs = 1
+      MaxLength = 0
+      TabOrder = 5
+      Text = 'Stub'
+    end
+    object Bevel4: TBevel
+      Left = 8
+      Height = 42
+      Top = 600
+      Width = 1114
+    end
+    object PrgrssBrAnalyse: TProgressBar
+      Left = 16
+      Height = 20
+      Top = 616
+      Width = 1096
+      TabOrder = 6
+    end
+    object lblNewFiles: TLabel
+      Left = 392
+      Height = 15
+      Top = 552
+      Width = 50
+      Caption = 'New Files'
+      ParentColor = False
+    end
+    object lblDeleteFiles: TLabel
+      Left = 392
+      Height = 15
+      Top = 568
+      Width = 59
+      Caption = 'Delete Files'
+      ParentColor = False
+    end
+  end
+  object lstBxDifferance: TListBox
+    Left = 392
+    Height = 472
+    Top = 72
+    Width = 348
+    ItemHeight = 0
+    ParentColor = True
+    TabOrder = 2
+  end
+  object lstBxDestination: TListBox
+    Left = 768
+    Height = 488
+    Top = 72
+    Width = 348
+    ItemHeight = 0
+    ParentColor = True
+    TabOrder = 3
+  end
   object mnuMain: TMainMenu
-    left = 15
-    top = 82
+    left = 304
+    top = 464
     object mnuFile: TMenuItem
       Caption = 'File'
       object mnuItmOptions: TMenuItem
@@ -238,7 +416,7 @@ object frmMain: TfrmMain
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    left = 174
-    top = 104
+    left = 384
+    top = 464
   end
 end
